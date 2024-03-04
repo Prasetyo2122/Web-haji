@@ -1,0 +1,518 @@
+body {
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('foto/--Please-generate-a-stunning-animation-of-Makkah-with-incredible-detail--I-would-like-this-animation-to-have-a-width-of-1600-pixels-and-a-height-of-750-pixels--Ensure-that-the-landmarks-and-beauty-of-.jpg');
+    background-size: 100% 100%; /* Sesuaikan ukuran background dengan lebar dan tinggi layar */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set tinggi ke 100% viewport height untuk memastikan latar belakang mencakup seluruh layar */
+}
+    .logo {
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+    
+    .logo-image {
+        width: 60px; /* Sesuaikan ukuran logo */
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .logo-name {
+        font-size: 1.2em;
+    }
+    
+    .navbar-center {
+        flex-grow: 1;
+    }
+    
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu li {
+        margin: 0 10px;
+        transition: transform 0.3s ease; /* Animasi transisi saat hover */
+    }
+    
+    .menu li:hover {
+        transform: scale(1.1); /* Memperbesar ukuran menu saat hover */
+    }
+    
+    .menu li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7); /* Ganti dengan warna tidak transparan */
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+    
+    .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .navbar-left {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-right .menu {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar-right .menu li {
+        margin: 0 10px;
+    }
+    
+    .navbar-right .menu li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        border-radius: 10px;
+        display: none;
+        position: absolute;
+        background-color: rgba(23, 11, 11, 0.804); /* Transparansi 30% */
+        min-width: 160px;
+       
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      .dropdown-content p {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 10px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown-content p:hover {
+        background-color: #f9f9f9ae}
+      
+     /* Animasi untuk muncul perlahan */
+     .background-text {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: transparent; /* Tulisan di awal tidak terlihat */
+        text-align: left;
+        animation: fadeIn 3.5s ease forwards; /* Animasi muncul perlahan */
+    }
+    
+    .background-text h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    /* Keyframes untuk animasi */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Media Queries */
+    
+    /* Styling for description */
+    .description {
+        margin-top: 10px;
+        max-width: 600px; /* Sesuaikan lebar maksimum deskripsi */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        color :#fff;
+    }
+    
+    .description p {
+        font-size: 1em; /* Sesuaikan ukuran teks */
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    
+    .content {
+        min-height: calc(100vh - 100px); /* 100px adalah tinggi footer */
+    }
+    
+    footer {
+      
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        z-index: 999;
+    }
+    .footer-logo {
+        width: 90px; /* Sesuaikan ukuran logo */
+        height: auto;
+        margin-top: -70px;
+        margin-left: 23px; /* Menggeser logo ke kanan */
+        margin-right: 10px;
+    }
+    .footer-content {
+        padding: 30px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    /* CSS untuk footer */
+    
+    
+    .social-media {
+        margin-left: auto;
+        margin-right: 10px; /* Menggeser ikon sosial media ke kiri */
+    }
+    
+    
+    .social-media a {
+        color: #fff;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+    
+    .social-media a i {
+        font-size: 24px;
+    }
+    
+    .social-media a:hover {
+        color: #ccc; /* Ubah warna ikon saat dihover */
+    }
+    
+    
+    .footer-info {
+        text-align: left; /* Mengatur teks menjadi rata kiri */
+        flex-grow: 1; /* Mengisi sisa ruang di antara logo dan info footer */
+    }
+    
+    .footer-info h3 {
+        margin-top: 0;
+        text-align: left; /* Mengatur teks menjadi rata kiri */
+    }
+    
+    .footer-info p {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left; /* Mengatur teks menjadi rata kiri */
+    }
+    
+    .footer-info .icon {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .footer-bottom {
+        background-color: #222;
+    }
+    
+    #tahun {
+        font-weight: bold;
+    }
+    
+    .copyright {
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    .copyright p {
+        margin: 0;
+    }
+    /* WAJIB */
+
+
+
+
+    .pricing-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .pricing-card {
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 250px;
+        background-color: #fff; /* Add background color */
+        margin-top: 1300px; /* Add margin-bottom to shift the card downwards */
+    }
+
+    
+    
+    .pricing-card img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .pricing-card h2 {
+        margin-top: 10px;
+    }
+    
+    .pricing-card p {
+        margin-top: 10px;
+    }
+    
+ 
+
+
+
+
+
+    .stacked-images {
+        position: absolute;
+        top: 800px; /* Sesuaikan posisi vertikal */
+        left: 20px; /* Sesuaikan posisi horizontal */
+    }
+    
+    .stacked-images img {
+    
+        display: block;
+        margin-bottom: 10px; /* Sesuaikan margin antara gambar jika diperlukan */
+        width: 200px; /* Sesuaikan lebar gambar */
+        height: auto; /* Pertahankan rasio aspek */
+    }
+    
+    .image1 {
+        position: absolute;
+        border-radius: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        top: 20px; /* Atur posisi vertikal */
+        left: 20px; /* Atur posisi horizontal */
+    }
+    
+    .image2 {
+        position: absolute;
+        border-radius: 960px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        height: 90px;
+        width: 100px;
+        top: 60px; /* Atur posisi vertikal, sama dengan gambar 1 */
+        left: 240px; /* Atur posisi horizontal, atur sesuai dengan lebar gambar 1 dan margin antara gambar */
+    }
+    
+    .image3 {
+        position: absolute;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        border-radius: 100px;
+        top: 205px; /* Atur posisi vertikal, di bawah gambar 1 */
+        left: 80px; /* Atur posisi horizontal, sama dengan gambar 1 */
+    }
+    .container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .stacked-images {
+        flex: 1;
+      }
+      
+      .content-right {
+        flex: 1;
+        padding-left: 20px; /* Atur jarak antara gambar dan teks sesuai kebutuhan */
+      }
+      .umrah-section {
+        position: absolute;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        background-color: #ebe1e1c6;
+        top: 840px;
+        right: 250px;
+        width: 600px; /* Atur lebar sesuai kebutuhan */
+        padding: 20px;
+        border-radius: 5px;
+        transform: translate(50%, -50%);
+    }
+    
+    .umrah-section h2 {
+        color: #000;
+        font-size: 24px;
+        margin-bottom: 10px;
+      
+    }
+    
+    .umrah-section p {
+        color: #171414;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .stars {
+        margin-top: 10px;
+        color: gold; /* Atur warna bintang disini */
+        display: flex; /* Mengatur tata letak menjadi flexbox */
+        gap: 5px; /* Jarak antara setiap bintang */
+        align-items: center; /* Posisikan bintang secara vertikal di tengah */
+    }
+
+    .fa-star {
+        font-size: 24px; /* Atur ukuran ikon bintang */
+    }
+    
+      
+    .additional-image {
+        text-align: center; /* Centers the image horizontally */
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+    
+    .additional-image img {
+        max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+        height: auto; /* Maintains the image's aspect ratio */
+    }
+    
+    /* Additional CSS for controlling image size */
+    .additional-image img {
+        width: 40%; /* You can adjust this value to change the width of the image */
+        /* Alternatively, you can set specific width and height values */
+        /* width: 300px; */
+        /* height: 200px; */
+    }
+    .button2 {
+        display: inline-block;
+        transition: all 0.2s ease-in;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        color: #090909;
+        padding: 0.7em 1.7em;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 0.5em;
+        background: #e8e8e8;
+        border: 1px solid #e8e8e8;
+        box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+      }
+      
+      .button2:active {
+        color: #666;
+        box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+      }
+      
+      .button2:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.25);
+        top: 100%;
+        width: 140%;
+        height: 180%;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+      }
+      
+      .button2:after {
+        content: "";
+        position: absolute;
+        left: 55%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.45);
+        top: 180%;
+        width: 160%;
+        height: 190%;
+        background-color: #009087;
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+      }
+      
+      .button2:hover {
+        color: #ffffff;
+        border: 1px solid #009087;
+      }
+      
+      .button2:hover:before {
+        top: -35%;
+        background-color: #009087;
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+      }
+      
+      .button2:hover:after {
+        top: -45%;
+        background-color: #009087;
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+      }
+      /* Style untuk ikon ceklis */
+      .checkmark {
+        color: green; /* Warna hijau untuk ikon ceklis */
+        margin-right: 5px; /* Jarak antara ikon ceklis dan teks */
+        font-size: 1.2em; /* Ukuran ikon ceklis */
+    }
+    
+    /* Style untuk membuat harga menjadi tebal */
+    .pricing-card p strong {
+        font-weight: bold;
+    }
+    
+    /* Style untuk meratakan teks ke kiri */
+    .description1 {
+        text-align: left;
+        color: #000; /* Warna teks utama */
+    }
+    
+    .checkmark-red {
+        color: red; /* Warna merah untuk tanda silang */
+    }
+    .price strong s {
+        color: rgb(103, 93, 93); /* Warna teks harga yang dicoret */
+      }
+      .pricing-card:nth-child(4),
+.pricing-card:nth-child(5) {
+    background-color: #CCCC66;
+}
+/* Aturan-aturan CSS Anda yang telah ada sebelumnya di sini */
+
+/* Media Queries */
+
+/* Styling for description */
+

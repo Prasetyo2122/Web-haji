@@ -1,0 +1,491 @@
+body {
+    margin-top: 90px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('foto/12.png');
+    background-size: 1600px 900px;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    height: 420px;
+
+}
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+    
+    .logo-image {
+        width: 60px; /* Sesuaikan ukuran logo */
+        height: auto;
+        margin-right: 10px;
+    }
+    .logo-name {
+        font-size: 1.2em;
+    }
+    .navbar-center {
+        flex-grow: 1;
+    }   
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu li {
+        margin: 0 10px;
+        transition: transform 0.3s ease; /* Animasi transisi saat hover */
+    }
+    
+    .menu li:hover {
+        transform: scale(1.1); /* Memperbesar ukuran menu saat hover */
+    }
+    
+    .menu li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7); /* Ganti dengan warna tidak transparan */
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+    
+    .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .navbar-left {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-right .menu {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar-right .menu li {
+        margin: 0 10px;
+    }
+    
+    .navbar-right .menu li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        border-radius: 10px;
+        display: none;
+        position: absolute;
+        background-color: rgba(23, 11, 11, 0.804); /* Transparansi 30% */
+        min-width: 160px;
+       
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      .dropdown-content p {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 10px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown-content p:hover {
+        background-color: #f9f9f9ae}
+      
+     /* Animasi untuk muncul perlahan */
+     .background-text {
+        justify-content: left;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: transparent; /* Tulisan di awal tidak terlihat */
+        text-align: center;
+        animation: fadeIn 1.8s ease forwards; /* Animasi muncul perlahan */
+    }
+    
+    .background-text h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    /* Keyframes untuk animasi */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Media Queries */
+    
+    /* Styling for description */
+    .description {
+        margin-top: 10px;
+        max-width: 600px; /* Sesuaikan lebar maksimum deskripsi */
+        margin-left: auto;
+        margin-right: auto;
+       
+        color :#fff;
+    }
+    
+    .description p {
+        font-size: 1em; /* Sesuaikan ukuran teks */
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    
+    .content {
+        min-height: calc(100vh - 100px); /* 100px adalah tinggi footer */
+    }
+    
+    footer {
+      margin-top: 90px;
+        margin-bottom: 90px;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        z-index: 999;
+    }
+    .footer-logo {
+        width: 90px; /* Sesuaikan ukuran logo */
+        height: auto;
+        margin-top: -70px;
+        margin-left: 23px; /* Menggeser logo ke kanan */
+        margin-right: 10px;
+    }
+    .footer-content {
+        padding: 30px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    /* CSS untuk footer */
+    
+    
+    .social-media {
+        margin-left: auto;
+        margin-right: 10px; /* Menggeser ikon sosial media ke kiri */
+    }
+    
+    
+    .social-media a {
+        color: #fff;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+    
+    .social-media a i {
+        font-size: 24px;
+    }
+    
+    .social-media a:hover {
+        color: #ccc; /* Ubah warna ikon saat dihover */
+    }
+    
+    
+    .footer-info {
+        text-align: left; /* Mengatur teks menjadi rata kiri */
+        flex-grow: 1; /* Mengisi sisa ruang di antara logo dan info footer */
+    }
+    
+    .footer-info h3 {
+        margin-top: 0;
+        text-align: left; /* Mengatur teks menjadi rata kiri */
+    }
+    
+    .footer-info p {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left; /* Mengatur teks menjadi rata kiri */
+    }
+    
+    .footer-info .icon {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .footer-bottom {
+        background-color: #222;
+    }
+    
+    #tahun {
+        font-weight: bold;
+    }
+    
+    .copyright {
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    .copyright p {
+        margin: 0;
+    }
+    /* WAJIB */
+.btn-floating {
+    position: fixed;
+    right: 25px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 0;
+    z-index: 9999;
+    color: white;
+    transition: .2s;
+}
+.btn-floating:hover{
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.btn-floating span{
+    font-size: 16px;
+    margin-left: 5px;
+    transition: .2s;
+    line-height: 0px;
+    display: none;
+
+}
+.btn-floating:hover span {
+    display: inline-block;
+}
+.btn-floating:hover img{
+    margin-bottom: -3px;
+}
+.btn-floating.whatsapp {
+    bottom: 25px;
+    background-color: #34af23;
+    border: 2px solid #fff;
+}
+.btn-floating.whatsapp:hover{
+    background-color: #1f7a12;
+}
+
+/* Style untuk form card */
+/* Style untuk form card */
+/* Style untuk form card */
+/* Style untuk form card */
+.form-container {
+    margin-bottom: 220px;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 500px; /* Menggunakan margin-right untuk menggeser form card ke kiri */
+    margin-top: 1000px; /* Menambahkan margin-top untuk menggeser form card ke bawah */
+}
+
+.form-card {
+    width: 500px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.66); /* Nilai alpha (opacity) diatur menjadi 0.8 */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.about-me {
+    margin-bottom: 300px;
+    
+    margin-top: 340px; /* Atur jarak dari elemen sebelumnya */
+}
+
+.about-me h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center; /* Meletakkan konten di tengah */
+    margin-bottom: 20px;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-me-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-me-image img {
+    max-width: 1000px; /* Maksimum lebar gambar adalah lebar div */
+    height: auto; /* Biarkan tinggi mengikuti proporsi asli */
+    display: block; /* Hilangkan ruang putih di bawah gambar */
+    margin: 0 auto; /* Posisikan gambar ke tengah div */
+}
+
+/* Contoh untuk mengatur ukuran gambar */
+.custom-image-size {
+    width: 400px; /* Atur lebar gambar */
+    height: auto; /* Biarkan tinggi mengikuti proporsi asli */
+}
+
+
+.about-me-description {
+    flex: 2;
+}
+
+.about-me-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6; /* Atur jarak baris */
+}
+
+
+iframe {
+    margin-top: 9000px;
+    display: block;
+    margin: 0 auto; /* Mengatur posisi iframe ke tengah */
+    border: 2px solid #ccc; /* Menambahkan border dengan ketebalan 2px dan warna abu-abu */
+    border-radius: 10px; /* Melengkungkan sudut border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan efek bayangan */
+    max-width: 100%; /* Mengatur lebar maksimum agar tidak melebihi lebar kontainer */
+}
+/* Tambahkan media queries di bawah CSS Anda */
+
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 60px;
+        background-size: cover;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-left {
+        display: none;
+    }
+
+    .form-container {
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .about-me {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-card {
+        padding: 20px;
+    }
+
+    .footer-logo {
+        margin-top: -50px;
+    }
+}

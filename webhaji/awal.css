@@ -1,0 +1,647 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* CSS untuk container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* CSS untuk konten */
+.content {
+    min-height: calc(100vh - 100px); /* 100px adalah tinggi footer */
+}
+
+/* CSS untuk footer */
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 999;
+}
+
+.footer-logo {
+    width: 90px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-top: -70px;
+    margin-left: 23px; /* Menggeser logo ke kanan */
+    margin-right: 10px;
+}
+
+.footer-content {
+    padding: 30px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    margin-left: auto;
+    margin-right: 10px; /* Menggeser ikon sosial media ke kiri */
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.social-media a i {
+    font-size: 24px;
+}
+
+.social-media a:hover {
+    color: #ccc; /* Ubah warna ikon saat dihover */
+}
+
+.footer-info {
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+    flex-grow: 1; /* Mengisi sisa ruang di antara logo dan info footer */
+}
+
+.footer-info h3 {
+    margin-top: 0;
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+}
+
+.footer-info p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+}
+
+.footer-info .icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background-color: #222;
+}
+
+#tahun {
+    font-weight: bold;
+}
+
+.copyright {
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* CSS untuk navigasi */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.logo-image {
+    width: 60px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-name {
+    font-size: 1.2em;
+}
+
+.navbar-center {
+    flex-grow: 1;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 10px;
+    transition: transform 0.3s ease; /* Animasi transisi saat hover */
+}
+
+.menu li:hover {
+    transform: scale(1.1); /* Memperbesar ukuran menu saat hover */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #faf4f4;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Ganti dengan warna tidak transparan */
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-right .menu li {
+    margin: 0 10px;
+}
+
+.navbar-right .menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Animasi untuk muncul perlahan */
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    animation: fadeIn 1.8s ease forwards;
+}
+
+.background-text h1 {
+    font-size: 2.5em; /* Ukuran font utama */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px; /* Mengatur jarak antara teks */
+}
+
+/* Keyframes untuk animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styling for description */
+.description {
+    margin-top: 10px;
+    max-width: 80%; /* Sesuaikan lebar maksimum deskripsi */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: #fff;
+}
+
+.description p {
+    font-size: 1em; /* Ukuran font deskripsi */
+    line-height: 1.6;
+}
+
+.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        height: 3rem;
+        padding: 0 2rem;
+        border-radius: 2rem;
+        background: #3d3a4e;
+        background-size: 400%;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: background-color 0.3s, transform 0.3s; /* Menambahkan transisi untuk perubahan warna dan ukuran */
+    }
+
+    .button:hover {
+        background-color: #483d8b; /* Ubah warna latar saat dihover */
+        transform: scale(1.05); /* Perbesar tombol saat dihover */
+    }
+    .button-content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+
+    .button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        width: 100%;
+        height: inherit;
+        border-radius: inherit;
+        background: linear-gradient(82.3deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
+        transition: all 0.475s;
+        color: #fff;
+    }
+
+    .button:hover::before {
+        transform: scaleX(1);
+    }
+
+
+.about-me {
+    width: 96%;
+    max-width: 95%;
+    margin: 740px auto 20px; /* Menambahkan jarak bawah dan mengurangi margin atas */
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-me img {
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 530px;
+}
+
+.about-text h2 {
+    color: black;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-bottom: 1px solid red;
+}
+
+.about-text p {
+    color: black;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.umrah-me {
+    width: 96%;
+    max-width: 95%;
+    margin: -90px auto 20px; /* Menambahkan jarak bawah dan mengurangi margin atas */
+    padding: 140px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.umrah-me img {
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.umrah-text {
+    width: 530px;
+}
+
+.umrah-text h2 {
+    color: black;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-bottom: 1px solid red;
+}
+
+.umrah-text p {
+    color: black;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.about[data-aos="fade-up"],
+.umrah[data-aos="fade-down"] {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.about[data-aos="fade-up"].aos-animate,
+.umrah[data-aos="fade-down"].aos-animate {
+    opacity: 1;
+}
+
+/* Sesuaikan durasi animasi di bawah ini (misalnya, 1s atau 2s) */
+.about[data-aos-duration="1000ms"][data-aos="fade-up"],
+.umrah[data-aos-duration="100s"][data-aos="fade-down"] {
+    transition-duration: 0s; /* Durasi animasi untuk konten haji dan umrah */
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Menambahkan jarak dari atas */
+    margin-bottom: 20px; /* Menambahkan jarak dari bawah */
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks */
+    padding: 8px 16px; /* Padding tombol */
+    border-radius: 4px; /* Sudut tombol */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    font-size: 16px; /* Ukuran teks */
+    transition: background-color 0.3s; /* Efek transisi saat digulir */
+}
+
+.card-button:hover {
+    background-color: #0056b3; /* Warna latar belakang saat tombol dihover */
+}
+
+/* CSS untuk dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: rgba(23, 11, 11, 0.804); /* Transparansi 30% */
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p:hover {
+    background-color: #f9f9f9ae;
+}
+
+/* Gaya untuk bagian Testimoni */
+.testimoni-section {
+    text-align: center; /* Pusatkan teks dan ikon */
+    margin-bottom: 20px; /* Berikan ruang antara bagian Testimoni dan slider */
+}
+
+.testimoni-section h2 {
+    margin-top: 0; /* Hilangkan margin atas */
+    font-size: 24px; /* Ukuran font */
+    color: #333; /* Warna teks */
+}
+
+.testimoni-section .fa-star {
+    color: #fbb710; /* Warna ikon bintang */
+}
+
+/* Sesuaikan ukuran slider dengan layar */
+.image-slider {
+    width: 40%; /* Lebar slider sesuai kebutuhan */
+    margin: 0 auto; /* Posisi slider di tengah */
+}
+
+/* Gaya untuk gambar di dalam slider */
+.image-slider img {
+    width: 100%; /* Gambar mengisi lebar slider */
+    height: auto; /* Menjaga aspek rasio gambar */
+}
+
+/* Media Queries untuk Responsiveness */
+
+/* Tablet Portrait */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+    .button {
+            padding: 0 1.5rem; /* Sesuaikan padding untuk layar kecil */
+            height: 2.5rem; /* Sesuaikan tinggi tombol untuk layar kecil */
+            font-size: 0.9rem; /* Sesuaikan ukuran font untuk layar kecil */
+        }
+
+    /* Konten */
+    .about-me,
+    .umrah-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me img,
+    .umrah-me img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-text,
+    .umrah-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Testimoni */
+    .testimoni-section h2 {
+        font-size: 1.5em;
+    }
+
+    .image-slider {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    /* Card Container */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 0;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+    }
+    .background-text {
+        left: 50%; /* Menggeser posisi teks ke tengah */
+        transform: translateX(-50%);
+    }
+    
+    .background-text h1 {
+        font-size: 2em; /* Mengurangi ukuran font utama */
+    }
+
+    .description {
+        max-width: 90%; /* Lebar deskripsi lebih sempit untuk layar kecil */
+    }
+
+    .description p {
+        font-size: 0.9em; /* Mengurangi ukuran font deskripsi */
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+    }
+    .button {
+            padding: 0 1rem; /* Sesuaikan padding lebih kecil untuk layar sangat kecil */
+            height: 2.2rem; /* Sesuaikan tinggi tombol lebih kecil untuk layar sangat kecil */
+            font-size: 0.8rem; /* Sesuaikan ukuran font lebih kecil untuk layar sangat kecil */
+        }
+
+    .navbar-left,
+    .navbar-right {
+        margin-bottom: 10px;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    /* Button */
+    .button {
+        font-size: 12px;
+        padding: 0 1rem;
+        height: 2.2rem;
+    }
+
+    /* Konten */
+    .about-text,
+    .umrah-text {
+        font-size: 0.9em;
+    }
+
+    /* Testimoni */
+    .testimoni-section h2 {
+        font-size: 1.2em;
+    }
+
+    .image-slider {
+        width: 90%;
+    }
+
+    /* Card Container */
+    .card {
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer-content {
+        font-size: 0.8em;
+    }
+    .background-text h1 {
+        font-size: 1.5em; /* Ukuran font utama lebih kecil untuk layar sangat kecil */
+    }
+
+    .description p {
+        font-size: 0.8em; /* Ukuran font deskripsi lebih kecil untuk layar sangat kecil */
+    }
+}
+
+
+/* Background Image */
+body {
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('foto/--Please-generate-a-stunning-animation-of-Makkah-with-incredible-detail--I-would-like-this-animation-to-have-a-width-of-1600-pixels-and-a-height-of-750-pixels--Ensure-that-the-landmarks-and-beauty-of-.jpg');
+    background-size: 100% 100%; /* Sesuaikan ukuran background dengan lebar dan tinggi layar */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 0vh; /* Set tinggi ke 100% viewport height untuk memastikan latar belakang mencakup seluruh layar */
+}
